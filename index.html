@@ -34,7 +34,7 @@ if(slider){
  const toggle=slider.querySelector('.slide-toggle');
  let current=0, paused=reduced, timer;
  function show(index){current=(index+slides.length)%slides.length;slides.forEach((slide,i)=>slide.hidden=i!==current);dots.forEach((dot,i)=>dot.setAttribute('aria-current',String(i===current)));}
- function schedule(){clearInterval(timer);if(!paused && !document.hidden && !slider.matches(':hover') && !slider.contains(document.activeElement))timer=setInterval(()=>show(current+1),6000);}
+ function schedule(){clearInterval(timer);if(!paused && !document.hidden && !slider.matches(':hover') && !slider.contains(document.activeElement))timer=setInterval(()=>show(current+1),2000);}
  function label(){toggle.textContent=paused?'Oynat':'Duraklat';toggle.setAttribute('aria-label',paused?'Otomatik geçişi başlat':'Otomatik geçişi duraklat');}
  dots.forEach((dot,i)=>dot.addEventListener('click',()=>{show(i);schedule();}));
  toggle.addEventListener('click',()=>{paused=!paused;label();schedule();});
