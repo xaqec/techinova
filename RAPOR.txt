@@ -1,0 +1,33 @@
+UYGULAMA VE ÖLÇÜM RAPORU
+
+Kapsam
+Bu çalışma WordPress üzerinde değil, mevcut statik HTML/CSS/JS paketinin ayrı kopyasında yapıldı. Önceki paket korunuyor. Canlı siteye dokunulmadı.
+
+Değişiklikler
+- Dar masaüstü dahil 1400 px altındaki genişliklerde menü açılır mobil menüye dönüşür. Satır taşması yerine kontrollü menü kullanılır.
+- Kurumsal metin ana sayfadan kaldırıldı. #corporate adresi bağımsız içerik görünümü açar. Yalnızca kurumsal metin ve altında podcast yer alır. Ortak üst menü ve footer korunur. Hash adresi GitHub Pages'te sunucu yönlendirmesi gerektirmez.
+- Ana sayfada sayısal istatistikler korundu.
+- Video yalnızca görünür ve sekme aktifken oynar. Kullanıcının duraklatma tercihi korunur. Mobilde 767 px ve altında video kaynağı yüklenmez, poster gösterilir.
+- Video üstündeki backdrop-filter kaldırıldı. Sürekli arka plan hareketi, imleç takip işlemi ve sürekli halka animasyonları kaldırıldı. Menü ve kart hover stilleri korunur.
+- H264 MP4: 1440x810 25 fps yerine 1280x720 24 fps. Ses yok, faststart açık, preload none.
+
+Ölçüm
+Eski dosya: 3.226.746 bayt
+Yeni dosya: 1.590.988 bayt (%50,7 küçük)
+FFmpeg tek iş parçacıklı yazılımsal çözme, 3 tekrar:
+Eski: 0,656 / 0,657 / 0,654 saniye
+Yeni: 0,401 / 0,406 / 0,401 saniye
+Medyan çözme süresi yaklaşık %39 azaldı.
+Bu test tarayıcı CPU yüzdesi, GPU veya gerçek sayfa performansı ölçümü değildir.
+
+Bulgular ve sınırlar
+Önceki kodda viewport dışına çıkınca video duraklatma yoktu. Hareketli video üstünde çok sayıda backdrop-filter vardı. Bunlar muhtemel yük kaynaklarıdır, tarayıcı profili alınmadan CPU spike'ının tek kesin nedeni olarak sunulamaz.
+JavaScript sözdizimi kontrolü ve yerel dosya kontrolleri geçti. Tarayıcı erişimi güvenlik kuralıyla engellendiği için masaüstü/mobil görsel regresyon, gerçek CPU profili ve oynatma yaşam döngüsünün tarayıcı doğrulaması tamamlanamadı. GIF karşılaştırması yapılmadı ve GIF'e geçilmedi.
+
+Kullanıcı doğrulaması
+1. Dosyaları staging veya test deposunda yayınlayın.
+2. 1440, 1280, 768 ve 390 px genişliklerde menüyü açın. Taşma kontrolü yapın.
+3. Kurumsal'a geçin. Hero video, takvim ve blog kartları olmamalı.
+4. Ana sayfada videodan aşağı kaydırın. Video durmalı. Geri dönünce kullanıcı duraklatmadıysa devam etmeli.
+5. Mobilde ağ panelinde hero-light.mp4 isteği olmamalı.
+6. Aynı cihazda önceki ve yeni sürüm için 30 saniye boyunca Performance kaydı alın. Video açık/kapalı, kaydırma ve boşta bekleme durumlarını ayrı karşılaştırın.

@@ -1,0 +1,18 @@
+{
+  "hero-port.mp4": {
+    "bytes": 3226746,
+    "decode_seconds": [
+      0.656,
+      0.657,
+      0.654
+    ]
+  },
+  "hero-light.mp4": {
+    "bytes": 1590988,
+    "decode_seconds": [
+      0.401,
+      0.406,
+      0.401
+    ]
+  }
+}
