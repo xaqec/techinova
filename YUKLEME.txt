@@ -1,0 +1,26 @@
+GITHUB PAGES — TAM PAKET / 11 EYLÜL 2026
+
+Tüm dosyalar aynı klasöre yüklenir; derleme ve paket kurulumu gerekmez. HTML/CSS/JavaScript statiktir. MP4/JPG/PNG/WOFF2 dosyaları dahildir. Slideshow fotoğrafları internet üzerinden Unsplash'tan yüklenir.
+
+1. ZIP'i çıkarın. Klasörün içindeki dosyaları kullanın; ZIP'i GitHub'a yüklemeyin.
+2. GitHub deposunun ana klasöründe Add file > Upload files seçin.
+3. Tüm dosyaları birlikte yükleyin (logo.png, fontlar, video, kapak ve 10 HTML dahil). assets klasörüne girmeyin.
+4. Commit changes ile main dalına kaydedin. Eski dosyaları önce silmeyin.
+5. Settings > Pages: Source = Deploy from a branch, Branch = main, Folder = / (root), Save.
+6. Actions'ta EN YENİ commit'in yayınının tamamlanmasını kontrol edin. Eski başarısız çalışmayı yeniden başlatmayın; eski dosyaları yayınlayabilir.
+7. Yayın başarılı olunca Settings > Pages'teki site bağlantısını açın ve Command+Shift+R ile yenileyin.
+
+.nojekyll gizli dosyası ZIP'te vardır; düz HTML siteyi Jekyll işleminden hariç tutar. Finder'da Command+Shift+. ile gizli dosyaları görebilirsiniz. Yüklenmezse GitHub Add file > Create new file ile .nojekyll adlı dosya oluşturabilirsiniz. Bu dosya Pages yayın servisi kesintilerini çözmez.
+
+Önceki timeout, yayın servisinin tamamlanmasını beklerken oluştu; kod hatası olduğu gösterilmedi. Tarayıcıyı kapatmanız GitHub işlemini durdurmaz. Yeni deneme de yaklaşık 10 dakika sonra timeout verirse dosyaları tekrar tekrar yüklemeyin. GitHub depo bağlantısını ve EN YENİ run bağlantısını paylaşın; yayın ayarları incelenmelidir. Bu paketin uyumluluğu GitHub hizmetinde kesintisiz yayın garantisi değildir.
+
+İçerikler:
+Gönderilen logo orijinal PNG olarak korunmuştur. İstatistikler kullanıcının ekran görüntüsündeki 2465 eğitim, 41675+ katılımcı, 370 URGE projesidir; canlı veri değildir.
+Üç yeni sayfa kaynak metinlerin birebir kopyası değil, özetlenmiş uyarlamasıdır; orijinallere bağlantı vardır:
+https://inovakademi.com/devlet-destekleri-2022/
+https://inovakademi.com/online-egitim/
+https://inovakademi.com/urge/
+Devlet destekleri yazısı tarihli arşiv özeti olarak işaretlendi. Eski örnek blog/etkinlik/iletişim bilgileri örnek etiketleriyle korunur. Gerçek kayıt/ödeme sistemi yoktur.
+Video kullanıcının gönderdiği 4778083 çekimidir; font lisansları pakettedir.
+
+Kontroller: dosya boyutları, yerel bağlantılar, bölüm bağlantıları, JS sözdizimi ve ZIP bütünlüğü. GitHub hesabınıza erişmeden canlı yayın doğrulanamaz.
