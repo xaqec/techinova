@@ -1,7 +1,0 @@
-İNOVAKADEMİ — 8 PARÇALI KEŞİF ÇARKI
-ZIP'i çıkarın. İçindeki TÜM dosyaları GitHub'da index.html bulunan ANA klasöre yükleyin. assets klasörüne girmeyin. Commit changes ile kaydedin. Yayın tamamlanınca Command+Shift+R ile yenileyin.
-Önceki ayrı dosyalı sürüm zaten yüklüyse yalnızca main.js ve style.css güncellenmesi yeterlidir.
-
-Çark videonun sağında bulunur. Sekiz yarım daire düğme üç blog yazısı ve beş örnek etkinlik önerir. Fareyle yaklaşınca, klavyeyle odaklanınca veya dokununca öneri değişir. Paneldeki bağlantıya basınca blog açılır veya ilgili etkinlik kartı açılıp gösterilir. Ok tuşlarıyla parçalar arasında geçilebilir. Küçük ekranlarda çark sloganın altına geçer. Hareketi azalt tercihi büyüme geçişini kapatır.
-Öneriler main.js içindeki wheelItems bölümünde, görünüm style.css sonundaki Eight-part discovery wheel bölümündedir.
-Örnek etkinlik ve iletişim etiketleri korunmuştur.
